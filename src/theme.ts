@@ -8,6 +8,15 @@ const theme: DefaultTheme = {
     background: "#f0f0f0",
     text: "#333333",
     border: "#eaeaea",
+    toolbarBackground: "#0070f3", // Toolbar background color
+    toolbarText: "#ffffff", // Toolbar text color
+    tabBackground: "#e0e0e0", // Tab background color
+    tabActive: "#0070f3", // Active tab color
+    tabText: "#333333", // Tab text color
+    appBar: {
+      background: "#0070f3", // AppBar background color
+      text: "#ffffff", // AppBar text color
+    },
   },
   fonts: {
     main: "Arial, sans-serif",

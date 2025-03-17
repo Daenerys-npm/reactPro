@@ -19,9 +19,10 @@ const App: React.FC = () => {
         <MuiThemeProvider theme={muiTheme}>
         <ThemeProvider theme={theme}>
             <CssBaseline />
+          
             <Router>
-           
-                        <CustomToolbar />
+            <CustomToolbar />
+                       
                         <div style={{ display: 'flex', minHeight: '100vh' }}>
                        
                         <Routes>
@@ -31,12 +32,12 @@ const App: React.FC = () => {
                             <Route path="/user" element={<ProtectedRoute component={User } />} />
                         </Routes>
                     
-                <Footer />
+              
                 </div>
             
                
             </Router>
-         
+            <Footer />
         </ThemeProvider>
         </MuiThemeProvider>
     );

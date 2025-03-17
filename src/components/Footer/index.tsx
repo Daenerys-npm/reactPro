@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <Box
       component="footer"
       sx={{
-        mt: 'auto',
+         mt: 'auto',
         p: 2,
         backgroundColor: '#1c1c1c',
         color: 'white',
