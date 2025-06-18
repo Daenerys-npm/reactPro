@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Sunset Overdrive",
+      "description": "A beautiful sunset on canvas with vibrant colors.",
+      "size": "16x20 inches",
+      "cost": "₹2000",
+      "image": "/1.jpg"
+    },
+    {
+      "title": "Monsoon Walk",
+      "description": "An abstract piece depicting a rainy street walk.",
+      "size": "12x18 inches",
+      "cost": "₹1800",
+      "image": "/2.jpg"
+    },
+    {
+      "title": "The Golden Hour",
+      "description": "A serene landscape of the golden hour.",
+      "size": "20x24 inches",
+      "cost": "₹2500",
+      "image": "/3.jpg"
+    }
+  ]

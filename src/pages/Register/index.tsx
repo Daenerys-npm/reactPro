@@ -1,12 +1,22 @@
 import React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, UseDispatch } from 'react-redux';
+import { addUser } from '../../redux/slices/usersSlice';
 
 const Register = () => {
     const { control, handleSubmit,getValues, formState: { errors } } = useForm();
 
+    const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+
     const handleRegister = (data: any) => {
         console.log("Registration Successful:", data);
+        dispatch(addUser(data));
+        navigate("/Login");
+
         // Add your registration logic here
     };
 

@@ -23,8 +23,14 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
       state.user = null;
     },
+    loginRequest(
+      state,
+      action: PayloadAction<{ username: string; password: string }>
+    ) {
+      // This action will be handled by the saga
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, loginRequest } = authSlice.actions;
 export default authSlice.reducer;

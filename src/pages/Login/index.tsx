@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/slices/authSlice';
+import { login, loginRequest } from '../../redux/slices/authSlice';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useForm, Controller } from "react-hook-form";
@@ -13,16 +13,19 @@ const Login: React.FC = () => {
 
 
   const username = watch("username");
+  const password = watch("password");
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleLogin = () => {
         dispatch(login({ username }));
+       // dispatch(loginRequest({ username, password })); // Dispatch loginRequest action
         if(username === "abc"){
             console.log(users);
-      navigate("/User");
-     
+
         }
+        navigate("/User");
+        console.log(users);
     };
 
     return (

@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
      
       <Box sx={{ flexGrow: 1, p: 2 }}>
-        <h1>Home Page</h1>
+        <h1 style={{ fontStyle: 'italic', fontVariant: 'small-caps', fontWeight: 'bold', fontSize: '25px', lineHeight: 2, fontFamily: 'cursive' }}>ARTSHOP</h1>
       </Box>
      
     </Box>

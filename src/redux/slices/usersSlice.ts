@@ -15,6 +15,8 @@ const initialState: Users = {
   userInfo: [], // Initialize as an empty array
 };
 
+let nextUserId = 1;
+
 const usersSlice = createSlice({
   name: "auth",
   initialState,
@@ -25,11 +27,12 @@ const usersSlice = createSlice({
     ) {
       // Directly push the new user data into the userInfo array
       state.userInfo.push({
-        userId: state.userInfo.length + 1, // Simple ID generation
+        userId: nextUserId++, // Simple ID generation
         username: action.payload.username,
         password: action.payload.password,
       });
-      console.log("User  Added:", action.payload.username);
+      console.log("---User  Added:", action.payload.username);
+      console.log("All Users:" + state.userInfo);
     },
     deleteUser(state, action: PayloadAction<number>) {
       state.userInfo = state.userInfo.filter(
