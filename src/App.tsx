@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import User from './pages/User';
 import ProtectedRoute from './components/ProtectedRoute';
 import { ThemeProvider } from 'styled-components';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
@@ -12,6 +10,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import CustomToolbar from './components/ToolBar';
 import Footer from './components/Footer';
 
+//lazy loads
+const Register = lazy(() => import("./pages/Register"));
+const User = lazy(() => import("./pages/User"));
 
 
 const App: React.FC = () => {
@@ -24,13 +25,14 @@ const App: React.FC = () => {
             <CustomToolbar />
                        
                         <div style={{ display: 'flex', minHeight: '100vh' }}>
-                       
+                         <Suspense fallback={<div>Loading...</div>}>
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path="/user" element={<ProtectedRoute component={User } />} />
                         </Routes>
+                        </Suspense>
                     
               
                 </div>

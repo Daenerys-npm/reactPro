@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       sx={{
          mt: 'auto',
         p: 2,
-        backgroundColor: '#1c1c1c',
+        backgroundColor: "#021853ff",
         color: 'white',
         textAlign: 'center',
       }}

@@ -15,7 +15,7 @@ const theme: DefaultTheme = {
     tabText: "#333333", // Tab text color
     appBar: {
       background: "#0070f3", // AppBar background color
-      text: "#ffffff", // AppBar text color
+      text: "#f0f0f0", // AppBar text color
     },
   },
   fonts: {

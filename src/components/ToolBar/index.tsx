@@ -17,13 +17,19 @@ const CustomToolbar: React.FC = () => {
 
   return (
   
-    <AppBar position="static" sx={{backgroundColor:"#2173a3"}}>
+    <AppBar position="static" sx={{
+       backgroundColor: "#021853ff",
+        boxShadow: "0px 2px 5px black",
+          backdropFilter: "blur(8px)",
+          padding: "10px",
+            fontFamily: "Poppins", 
+    }}>
     <Box sx={{ display: "flex",  justifyContent: "flex-end"}}>
         <Tabs
           value={value}
           onChange={(_, newValue) => setValue(newValue)}
           textColor="inherit"
-          TabIndicatorProps={{ style: { backgroundColor: "#ffffff" } }} // Active tab underline color
+          TabIndicatorProps={{ style: { backgroundColor: "#f0f0f0" } }} // Active tab underline color
         
         >
           <Tab label="Home" onClick={() => navigate("/")} />

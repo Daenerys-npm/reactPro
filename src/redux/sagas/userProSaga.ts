@@ -4,14 +4,16 @@ import {
   setUserProducts,
   fetchUserProductsRequest,
 } from "../slices/userProSlice";
+import axios from "axios";
 
 // Function to fetch user products from the JSON file
 const fetchUserProducts = async () => {
-  const response = await fetch(`${process.env.PUBLIC_URL}/UserPro.json`);
-  if (!response.ok) {
+  const response = await axios.get(`./UserPro.json`);
+  console.log("User Products:" + response);
+  if (!response) {
     throw new Error("Network response was not ok");
   }
-  return response.json();
+  return response;
 };
 
 // Worker saga to handle fetching products

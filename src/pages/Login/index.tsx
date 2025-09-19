@@ -91,7 +91,7 @@ const Login: React.FC = () => {
                     )}
                 />
 
-                <Button type="submit" variant="contained" color="primary" sx={{ marginTop: '20px' }}>
+                <Button type="submit" variant="contained" color="primary" sx={{ marginTop: '20px', backgroundColor: "#0436b5ff", }}>
                     Login
                 </Button>
             </form>
