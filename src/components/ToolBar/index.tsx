@@ -21,7 +21,7 @@ const CustomToolbar: React.FC = () => {
        backgroundColor: "#021853ff",
         boxShadow: "0px 2px 5px black",
           backdropFilter: "blur(8px)",
-          padding: "10px",
+          padding: "12px",
             fontFamily: "Poppins", 
     }}>
     <Box sx={{ display: "flex",  justifyContent: "flex-end"}}>
@@ -29,7 +29,7 @@ const CustomToolbar: React.FC = () => {
           value={value}
           onChange={(_, newValue) => setValue(newValue)}
           textColor="inherit"
-          TabIndicatorProps={{ style: { backgroundColor: "#f0f0f0" } }} // Active tab underline color
+          TabIndicatorProps={{ style: { backgroundColor: "#ca9292ff" } }} // Active tab underline color
         
         >
           <Tab label="Home" onClick={() => navigate("/")} />
